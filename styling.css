@@ -1,0 +1,66 @@
+.signupbd{
+	
+	background-image:  linear-gradient(to bottom right, #FFF8E1, #FFC107);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	margin: 0;
+	padding: 0;
+	font-family: 'Indie Flower', cursive;
+}
+
+.signupform{
+
+	background-color: #FF6F00;
+	
+	border-radius: 4px;
+	padding: 20px;
+	margin: 100px 200px 10px 200px;
+	color:#FFECB3;
+	text-align: center;
+}
+
+.signupform [type="text"]{
+
+	width: 98%;
+	padding: 8px 12px;
+	border-radius: 4px;
+	margin: 8px 0;
+}
+.signupform [type="email"]{
+
+	width: 98%;
+	padding: 8px 12px;
+	border-radius: 4px;
+	margin: 8px 0;
+}
+.signupform [type="date"]{
+
+	width: 98%;
+	padding: 8px 12px;
+	border-radius: 4px;
+	margin: 8px 0;
+
+}
+.signupform [type="password"]{
+
+	width: 98%;
+	padding: 8px 12px;
+	border-radius: 4px;
+	margin: 8px 0;
+}
+ .signupform [type="submit"]{
+	width: 100%;
+	background-color: #FFAB00;
+	color:#FFECB3;
+	border: none;
+	padding: 8px 12px;
+	margin-top: 10px;
+	border-radius: 4px;
+}
+.h1signup{
+	color: #FF6F00;
+	text-align: center;
+	margin-top: 20px;
+
+}
