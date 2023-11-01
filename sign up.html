@@ -12,11 +12,11 @@
 <body class="signupbd">
 	<h1 class="h1signup">Kula Chap Chap</h1>
 	<div class="signupform">
-<form>
+<form onsubmit="return validateForm()" action="login.html">
 	
 	<label for="fname">First Name: </label>
 	<input type="text" name="fname" placeholder="First Name" id="fname">
-
+	<div id="fnameresult" class="result"></div>
 
 	<label for="lname">Last Name: </label>
 	<input type="text" name="lname" placeholder="Last Name" id="lname">
@@ -30,23 +30,104 @@
 	<div id="phoneresult" class="result"></div>
 	
 	<label>Date of Birth: </label>
-	<input type="date" name="resdate" id="dob">
+	<input type="date" name="dob" id="dob">
 
 	<label for="password">Password: </label>
-	<input type="password" name="Password" placeholder="Password" id="signuppw">
+	<input type="password" name="Password" placeholder="Enter Password" id="password">
+	<div id="passresult" class="result"></div>
 
 	<label for="cpassword">Confirm Password: </label>
-	<input type="password" name="Cpassword" placeholder="Confirm Password" id="csignuppw">
+	<input type="password" name="Cpassword" placeholder="Confirm Password" id="cpassword">
+	<div id="cpassresult" class="result"></div>
 				
-	
-
 	<input type="submit" value="Sign Up">
 
 	
 
 </form>
 </div>
-	
+
+	<script>
+	function validateForm(){
+
+		let fname = document.getElementById('fname').value;
+
+		let lname = document.getElementById('lname').value;
+		let email = document.getElementById('email').value;
+		let phonenumber = document.getElementById('phonenumber').value;
+		let dob = document.getElementById('dob').value;
+		let password = document.getElementById('password').value;
+		let cpassword = document.getElementById('cpassword').value;
+		let fnameResult = document.getElementById('fnameresult');
+		let lnameResult = document.getElementById('lnameresult');
+		let phoneResult = document.getElementById('phoneresult');
+		let passResult = document.getElementById('passresult');
+		let cpassResult = document.getElementById('cpassresult');
+
+		if (fname == '' || lname == '' || email == '' || phonenumber == '' || dob == '' || password == '' || cpassword == '') {
+			alert("Please fill all the fields");
+			return false;
+		}
+
+		var regx =  /^[A-Za-z]+$/;
+		var regy =  /^[0-9]+$/;
+
+		if(regx.test(fname)){
+
+			fnameResult.innerHTML = "";
+		}
+		else{
+			fnameResult.innerHTML = "This field only accepts alphabetic values";
+			return false;
+		}
+
+		if(regx.test(lname)){
+
+			lnameResult.innerHTML = "";
+		}
+		else{
+			lnameResult.innerHTML = "This field only accepts alphabetic values";
+			return false;
+		}
+
+		if(regy.test(phonenumber)){
+
+			phoneResult.innerHTML = "";
+		}
+		else{
+			phoneResult.innerHTML = "This field only accepts numeric values";
+			return false;
+		}
+
+		if (password.length < 8) {
+			passResult.innerHTML = "This field only accepts 8 or more characters";
+			return false;
+		} else{
+			passResult.innerHTML = "";
+		}
+		if (cpassword.length < 8) {
+			cpassResult.innerHTML = "This field only accepts 8 or more characters";
+			return false;
+		} else {
+			cpassResult.innerHTML = "";
+		}
+		if (!password.match(/^[a-zA-Z0-9]*$/)) {
+			
+			passResult.innerHTML = "This field only accepts alphanumeric values";
+			return false;
+		} else{
+			passResult.innerHTML = "";
+		}
+		if (password !== cpassword) {
+			cpassResult.innerHTML = "The passwords don't match";
+			return false;
+		} 
+
+		alert('Sign Up Complete');
+		return true;
+		
+	}
+</script>
 
 </body>
 </html>
