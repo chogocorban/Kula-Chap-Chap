@@ -129,3 +129,50 @@
 	margin: 50px;
 	color: #FF6F00;
 }
+.h1home{
+	color: #FF6F00;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.hometa{
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+
+}
+.subhome{
+	text-align: center;
+	font-size: 15px;
+	font-family: 'Indie Flower', cursive;
+}
+.homebtn{
+	font-size: 20px;
+	font-family: 'Indie Flower', cursive;
+	padding: 0.5em 1em;
+	margin: 0.25em 0.25em 0.25em 1em;
+	border-radius: 1em;
+	border:  none;
+	outline: none;
+	background: #FFAB00;
+	color: #FFF8E1;
+}
+
+.slbtn{
+	font-size: 20px;
+	font-family: 'Indie Flower', cursive;
+	padding: 0.5em 1em;
+	margin: 0.25em 0.25em -1em 31.5em;
+	border-radius: 1em;
+	border:  none;
+	outline: none;
+	background: #FFAB00;
+	color: #FFF8E1;
+}
+.homebtn:hover{
+	background: #FF6F00;
+}
+.slbtn:hover{
+	background: #FF6F00;
+}
