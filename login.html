@@ -12,8 +12,9 @@
 <body class="loginbd">
 
 	<h1 class="h1login">Kula Chap Chap</h1>
+	<a href="home.html"><button class="slbtn">Home</button></a>
 	<div class="loginform">
-<form action="home.html">
+<form onsubmit="validateForm()" action="home.html">
 
 	<label for="email">Email: </label>
 	<input type="email" name="Email" placeholder="Email" id="email">
@@ -25,10 +26,48 @@
 
 	<input type="submit" value="Log In">
 
+	<p>Don't have an account? You can sign up <a href="sign up.html">here</a></p>	
 	
 
 </form>
 </div>
+
+	
+	<script>
+	function validateForm(){
+
+		let email = document.getElementById('email').value;
+		let password = document.getElementById('password').value;
+		let passResult = document.getElementById('passresult');
+		
+
+		if (email == '' || password == '') {
+			alert("Please fill all the fields");
+			return false;
+		}
+
+		
+		if (password.length < 8) {
+			passResult.innerHTML = "This field only accepts 8 or more characters";
+			return false;
+		} else{
+			passResult.innerHTML = "";
+		}
+
+		if (!password.match(/^[a-zA-Z0-9]*$/)) {
+			
+		passResult.innerHTML = "This field only accepts alphanumeric values";
+		return false;
+		} else{
+			passResult.innerHTML = "";
+		}
+	
+		alert('Login Succesful');
+		return true;
+		
+	}
+</script>
+
 
 </body>
 </html>
