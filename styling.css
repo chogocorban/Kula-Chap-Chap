@@ -58,7 +58,7 @@
 	margin-top: 10px;
 	border-radius: 4px;
 }
-.h1signup{
+ h1{
 	color: #FF6F00;
 	text-align: center;
 	margin-top: 20px;
@@ -74,12 +74,6 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Indie Flower', cursive;
-}
-.h1login{
-	color: #FF6F00;
-	text-align: center;
-	margin-top: 20px;
-
 }
 
 .loginform{
@@ -129,11 +123,6 @@
 	margin: 50px;
 	color: #FF6F00;
 }
-.h1home{
-	color: #FF6F00;
-	text-align: center;
-	margin-top: 20px;
-}
 
 .hometa{
 	padding: 0px;
@@ -176,3 +165,73 @@
 .slbtn:hover{
 	background: #FF6F00;
 }
+
+.nb ul{
+	list-style-type: none;
+	background-color: #FF6F00;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+.nb a{
+	color: #FFCA28;
+	text-decoration: none;
+	padding: 15px;
+	display: block;
+	text-align: center;
+}
+.nb a:hover{
+	background-color: #FFE57F;
+}
+.nb li{
+	float: left;
+}
+.nb .right{
+	float: right;
+}
+body{
+	
+	background-image:  linear-gradient(to top right, #FFE57F, #FFC400);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	margin: 0;
+	padding: 0;
+	font-family: 'Indie Flower', cursive;
+}
+h2{
+	color: #FF6F00;
+	text-align: left;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+.categorygallery{
+	width: 80%;
+	margin:100px auto 50px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 30px;
+
+
+}
+.categorygallery img{
+	width: 100%;
+	height: 85%;
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+.categoryimg, caption{
+	text-align: center;
+	color: #FF6F00;
+	font-size: 20px;
+}
+
+
+.categorygallery img:hover{
+	transform: scale(0.8);
+	z-index:2;
+	border-radius: 20px;
+	box-shadow: 0 32px 7px rgba(68, 77, 136, 0.2);
+}
+
