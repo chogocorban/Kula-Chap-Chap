@@ -13,25 +13,30 @@ session_start();
 		/*if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password) && !is_numeric($fname) && !is_numeric($lname){*/
 				//read from database
 				
-				$sql = "SELECT * FROM users2 WHERE email = '$email'";
+				$sql = "SELECT * FROM users2 WHERE email = '$email' LIMIT 1";
 				$result = mysqli_query($conn, $sql);
 
 				if ($result) {
-			
+					if ($result && mysqli_num_rows($result) > 0) {
+			// code...
+						$user_data = mysqli_fetch_assoc($result);
+						
+						if($user_data['password'] === $password){
+							$_SESSION['id'] = $user_data['id'];
 							header("Location: index.php");
-							
-						}else{
-							echo "Wrong email or password!";
+							die;
 						}
 					}
+				}
+				echo "Wrong email or password!";		
 				
-						
-				
-	
+	}
 
 
 
  ?>
+
+
 
 
  <!DOCTYPE html>
