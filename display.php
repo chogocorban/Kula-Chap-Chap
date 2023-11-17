@@ -48,12 +48,12 @@ include 'connection.php';
       <th scope="row">'.$id.'</th>
       <td>'.$name.'</td>
       <td>'.$email.'</td>
-      <td>'.$password.'</td>';
+      <td>'.$password.'</td>;
       <td>
-     <button><a href="">Update</a></button>
-    <button> <a href="">Delete</a> </button>
+      <button><a href="">Update</a></button>
+      <button> <a href="">Delete</a> </button>
       </td>
-      </tr>;'
+      </tr>';
 
       
 
