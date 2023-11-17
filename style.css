@@ -1,0 +1,91 @@
+body{
+	font-family: 'Indie Flower', cursive;
+	margin: 0;
+	padding: 0;
+	color: #FF6F00;
+	background-image:  linear-gradient(to top right, #FFE57F, #FFC400);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.container .item img{
+	width: 90%;
+	align-content: center;
+	filter: drop-shadow(0px 5px 10px black);
+}
+.container{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	width: 20%;
+	text-align: center;
+	margin-left: 15%;
+
+}
+.container .item{
+	background-color: #FFECB3;
+	padding: 20px;
+	border-radius: 20px;
+
+}
+.container .item h2{
+	font-weight: 500;
+	font-size: large;
+}
+.container .item .caption{
+	letter-spacing: 7px;
+	font-size: small;
+	text-align: center;		
+}
+.container .item .submit{
+	background-color: #FFD740;
+	color: #FF6F00;
+	padding: 5px 10px;
+	border-radius: 20px;
+	margin-top: 10px;
+	border: none;
+	cursor: pointer;
+	
+}
+
+.nb ul{
+	list-style-type: none;
+	background-color: #FF6F00;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+.nb a{
+	color: #FFCA28;
+	text-decoration: none;
+	padding: 15px;
+	display: block;
+	text-align: center;
+}
+.nb a:hover{
+	background-color: #FFE57F;
+}
+.nb li{
+	float: left;
+}
+.nb .right{
+	float: right;
+}
+ h1{
+	color: #FF6F00;
+	text-align: center;
+	margin-top: 20px;
+
+}
+h2{
+	color: #FF6F00;
+	text-align: left;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+table{
+	border: thick;
+	border-color: white;
+	background-color: black;
+}
