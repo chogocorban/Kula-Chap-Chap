@@ -43,12 +43,16 @@ if(isset($_GET["action"])){
 
 			if($values["item_id"] == $_GET["id"]){
 				unset($_SESSION["shopping_cart"][$keys]);
-				echo '<script>alert("Item removed")</script>';
+				//echo '<script>alert("Item removed")</script>';
 				echo '<script>window.location="snacks.php"</script>';
 			}
 		}
 	}
 }
+
+include'functions.php';
+
+	$user_data = check_login($conn);
 
 ?>
 
@@ -76,7 +80,7 @@ if(isset($_GET["action"])){
 			<li><a href="index.php">Home</a></li>
 			<li><a href="snacks.php">Snacks</a></li>		
 			<li><a href="beverages.php">Beverages</a></li>
-			<li><a href="food.html">Food</a></li>
+			<li><a href="food.php">Food</a></li>
 			<li class="right"><a href="logout.php">Log Out</a></li>
 			
 		</ul>
@@ -105,7 +109,7 @@ if(isset($_GET["action"])){
 					
 					<br><caption class="caption">Samosa <br>50/= </caption>
 					<div>
-						<input type="number" name="quantity" class="form-control" value="0">
+						<input type="number" name="quantity" class="form-control" value="1">
 					</div>
 										
 					<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
@@ -146,7 +150,7 @@ if(isset($_GET["action"])){
 					
 					<br><caption>Mandazi <br>15/= </caption>
 					<div>
-						<input type="number" name="quantity" class="form-control" value="0">
+						<input type="number" name="quantity" class="form-control" value="1">
 					</div>
 					
 					<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
@@ -185,7 +189,7 @@ if(isset($_GET["action"])){
 					
 					<br><caption>Cake <br>100/= </caption>
 					<div>
-						<input type="number" name="quantity" class="form-control" value="0">
+						<input type="number" name="quantity" class="form-control" value="1">
 					</div>
 					
 					<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
@@ -225,7 +229,7 @@ if(isset($_GET["action"])){
 					
 					<br><caption>Donut <br>40/= </caption>
 					<div>
-						<input type="number" name="quantity" class="form-control" value="0">
+						<input type="number" name="quantity" class="form-control" value="1">
 					</div>
 					
 					<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
@@ -266,7 +270,7 @@ if(isset($_GET["action"])){
 					
 					<br><caption>Cookies <br>50/= </caption>
 					<div>
-						<input type="number" name="quantity" class="form-control" value="0">
+						<input type="number" name="quantity" class="form-control" value="1">
 					</div>
 					
 					<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
@@ -308,7 +312,7 @@ if(isset($_GET["action"])){
 					
 					<br><caption>Hotdog <br>60/= </caption>
 					<div>
-						<input type="number" name="quantity" class="form-control" value="0">
+						<input type="number" name="quantity" class="form-control" value="1">
 					</div>
 					
 					<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
@@ -350,7 +354,7 @@ if(isset($_GET["action"])){
 					
 					<br><caption>Ice cream <br>120/= </caption>
 					<div>
-						<input type="number" name="quantity" class="form-control" value="0">
+						<input type="number" name="quantity" class="form-control" value="1">
 					</div>
 					
 					<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />

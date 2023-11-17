@@ -1,13 +1,13 @@
 <?php 
 
-function check_login($con){
+function check_login($conn){
 
 	if (isset($_SESSION['user_id'])) {
 		// code...
 
 		$id = $_SESSION['user_id'];
 		$query = "select * from users where user_id = '$id' limit 1";
-		$result = mysqli_query($con,$query);
+		$result = mysqli_query($conn,$query);
 		if ($result && mysqli_num_rows($result) > 0) {
 			// code...
 			$user_data = mysqli_fetch_assoc($result);

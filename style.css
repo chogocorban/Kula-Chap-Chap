@@ -49,6 +49,8 @@ body{
 	
 }
 
+
+
 .nb ul{
 	list-style-type: none;
 	background-color: #FF6F00;
@@ -89,3 +91,34 @@ table{
 	border-color: white;
 	background-color: black;
 }
+
+.category a{
+	width: 90%;
+	align-content: center;
+	filter: drop-shadow(0px 5px 10px black);
+}
+.category{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	width: 20%;
+	text-align: center;
+	margin-left: 15%;
+
+}
+.category .option{
+	background-color: #FFECB3;
+	padding: 20px;
+	border-radius: 20px;
+
+}
+.category .option h2{
+	font-weight: 500;
+	font-size: large;
+}
+.category .option .caption{
+	letter-spacing: 7px;
+	font-size: small;
+	text-align: center;		
+}
+

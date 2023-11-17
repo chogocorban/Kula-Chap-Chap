@@ -20,7 +20,7 @@ session_start();
 	 		}
 	 		else{
 	 			echo '<script>alert("Item already added")</script>';
-	 			echo'<script>window.location="beverages.php"</script>';
+	 			echo'<script>window.location="food.php"</script>';
 	 		}
 
 	 	}else{
@@ -44,7 +44,7 @@ if(isset($_GET["action"])){
 			if($values["item_id"] == $_GET["id"]){
 				unset($_SESSION["shopping_cart"][$keys]);
 				//echo '<script>alert("Item removed")</script>';
-				echo '<script>window.location="beverages.php"</script>';
+				echo '<script>window.location="food.php"</script>';
 			}
 		}
 	}
@@ -88,13 +88,13 @@ include'functions.php';
 	</div>
 
 
-	<h2>Beverage Menu</h2>
+	<h2>Snack Menu</h2>
 
 <div class="container">
 
 	<div class="item">
 	<?php 
-	$query = "SELECT * FROM snacks WHERE id = 8";
+	$query = "SELECT * FROM snacks WHERE id = 14";
 	$result = mysqli_query($conn, $query);
 	if (mysqli_num_rows($result) > 0) {
 		// code...
@@ -103,11 +103,11 @@ include'functions.php';
 			?>
 			
 				
-				<form method="post" action="beverages.php?action=add&id=<?php echo $row["id"]; ?>">
+				<form method="post" action="food.php?action=add&id=<?php echo $row["id"]; ?>">
 					
-					<img src="water.jpg">
+					<img src="sandwich.jpg">
 					
-					<br><caption class="caption">Water <br>30/= </caption>
+					<br><caption class="caption">Sandwich <br>120/= </caption>
 					<div>
 						<input type="number" name="quantity" class="form-control" value="1">
 					</div>
@@ -136,7 +136,7 @@ include'functions.php';
 
 	<div class="item">
 	<?php 
-	$query = "SELECT * FROM snacks WHERE id = 9";
+	$query = "SELECT * FROM snacks WHERE id = 15";
 	$result = mysqli_query($conn, $query);
 	if (mysqli_num_rows($result) > 0) {
 		// code...
@@ -144,11 +144,11 @@ include'functions.php';
 			// code...
 			?>
 			
-				<form method="post" action="beverages.php?action=add&id=<?php echo $row["id"]; ?>">
+				<form method="post" action="food.php?action=add&id=<?php echo $row["id"]; ?>">
 					
-					<img src="juice.webp">
+					<img src="fries.webp">
 					
-					<br><caption>Juice <br>50/= </caption>
+					<br><caption>Fries <br>100/= </caption>
 					<div>
 						<input type="number" name="quantity" class="form-control" value="1">
 					</div>
@@ -175,7 +175,7 @@ include'functions.php';
 
 	 	<div class="item">
 	<?php 
-	$query = "SELECT * FROM snacks WHERE id = 10";
+	$query = "SELECT * FROM snacks WHERE id = 16";
 	$result = mysqli_query($conn, $query);
 	if (mysqli_num_rows($result) > 0) {
 		// code...
@@ -183,11 +183,11 @@ include'functions.php';
 			// code...
 			?>
 			
-				<form method="post" action="beverages.php?action=add&id=<?php echo $row["id"]; ?>">
+				<form method="post" action="food.php?action=add&id=<?php echo $row["id"]; ?>">
 					
-					<img src="softdrink.webp">
+					<img src="burger.jpg">
 					
-					<br><caption>Soft Drink <br>100/= </caption>
+					<br><caption>Burger <br>150/= </caption>
 					<div>
 						<input type="number" name="quantity" class="form-control" value="1">
 					</div>
@@ -215,7 +215,7 @@ include'functions.php';
 
 	 	<div class="item">
 	<?php 
-	$query = "SELECT * FROM snacks WHERE id = 11";
+	$query = "SELECT * FROM snacks WHERE id = 17";
 	$result = mysqli_query($conn, $query);
 	if (mysqli_num_rows($result) > 0) {
 		// code...
@@ -223,11 +223,11 @@ include'functions.php';
 			// code...
 			?>
 			
-				<form method="post" action="beverages.php?action=add&id=<?php echo $row["id"]; ?>">
+				<form method="post" action="food.php?action=add&id=<?php echo $row["id"]; ?>">
 					
-					<img src="yoghurt.webp">
+					<img src="chickenbucket.jpg">
 					
-					<br><caption>Yoghurt <br>150/= </caption>
+					<br><caption>Fried Chicken Bucket <br>250/= </caption>
 					<div>
 						<input type="number" name="quantity" class="form-control" value="1">
 					</div>
@@ -256,7 +256,7 @@ include'functions.php';
 
 	 	<div class="item">
 	<?php 
-	$query = "SELECT * FROM snacks WHERE id = 12";
+	$query = "SELECT * FROM snacks WHERE id = 18";
 	$result = mysqli_query($conn, $query);
 	if (mysqli_num_rows($result) > 0) {
 		// code...
@@ -264,11 +264,11 @@ include'functions.php';
 			// code...
 			?>
 			
-				<form method="post" action="beverages.php?action=add&id=<?php echo $row["id"]; ?>">
+				<form method="post" action="food.php?action=add&id=<?php echo $row["id"]; ?>">
 					
-					<img src="milkshake.jpg">
+					<img src="pizza.jpg">
 					
-					<br><caption>Milkshake <br>200/= </caption>
+					<br><caption>Pizza <br>300/= </caption>
 					<div>
 						<input type="number" name="quantity" class="form-control" value="1">
 					</div>
@@ -298,7 +298,7 @@ include'functions.php';
 
 	 	<div class="item">
 	<?php 
-	$query = "SELECT * FROM snacks WHERE id = 13";
+	$query = "SELECT * FROM snacks WHERE id = 19";
 	$result = mysqli_query($conn, $query);
 	if (mysqli_num_rows($result) > 0) {
 		// code...
@@ -306,11 +306,11 @@ include'functions.php';
 			// code...
 			?>
 			
-				<form method="post" action="beverages.php?action=add&id=<?php echo $row["id"]; ?>">
+				<form method="post" action="food.php?action=add&id=<?php echo $row["id"]; ?>">
 					
-					<img src="smoothie.jpg">
+					<img src="taco.jpg">
 					
-					<br><caption>Smoothie <br>120/= </caption>
+					<br><caption>Taco <br>120/= </caption>
 					<div>
 						<input type="number" name="quantity" class="form-control" value="1">
 					</div>
@@ -333,7 +333,6 @@ include'functions.php';
 	}
 	 ?>
 	 </div>	
-
 
 
 
@@ -365,7 +364,7 @@ include'functions.php';
 	 					<td><?php echo $values["item_quantity"]; ?></td>
 	 					<td>$ <?php echo $values["item_price"]; ?></td>
 	 					<td><?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></td>
-	 					<td><a href="beverages.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a> </td>
+	 					<td><a href="food.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a> </td>
 	 				</tr>
 	 				<?php
 	 					$total = $total + ($values["item_quantity"] * $values["item_price"]);
