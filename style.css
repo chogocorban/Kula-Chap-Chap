@@ -122,3 +122,9 @@ table{
 	text-align: center;		
 }
 
+tr{
+
+	color: white;
+	border-color: red;
+}
+
