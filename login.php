@@ -13,24 +13,21 @@ session_start();
 		/*if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password) && !is_numeric($fname) && !is_numeric($lname){*/
 				//read from database
 				
-				$sql = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
+				$sql = "SELECT * FROM users2 WHERE email = '$email'";
 				$result = mysqli_query($conn, $sql);
 
 				if ($result) {
-					if ($result && mysqli_num_rows($result) > 0) {
-			// code...
-						$user_data = mysqli_fetch_assoc($result);
-						
-						if($user_data['password'] === $password){
-							$_SESSION['user_id'] = $user_data['user_id'];
+			
 							header("Location: index.php");
-							die;
+							
+						}else{
+							echo "Wrong email or password!";
 						}
 					}
-				}
-				echo "Wrong email or password!";		
 				
-	}
+						
+				
+	
 
 
 
@@ -77,7 +74,7 @@ session_start();
  			<input id="text" type="email" name="email" placeholder="email"><br><br>
  			<input id="text" type="password" name="password" placeholder="password"><br><br>
  			<input id="button" type="submit" name="login"><br><br>
- 			<a href="signup.php">signup</a>
+ 			<a href="adminlogin.php">Admin login</a>
  		</form>
 
  	</div>

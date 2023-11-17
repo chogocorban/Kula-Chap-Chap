@@ -7,28 +7,33 @@ session_start();
 	if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
 		//something was posted
-		$fname = $_POST['fname'];
-		$lname = $_POST['lname'];
-		$email = $_POST['email'];
+		$name = $_POST['name'];
 		$password = $_POST['password'];
 
 		/*if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password) && !is_numeric($fname) && !is_numeric($lname){*/
-				//save to database
-				$user_id = random_num(20);
-				$sql = "INSERT INTO users(user_id,fname,lname,email,password) VALUES ('$user_id','$fname','$lname','$email','$password')";
+				//read from database
+				
+				$sql = "SELECT * FROM admin WHERE name = '$name' LIMIT 1";
 				$result = mysqli_query($conn, $sql);
 
 				if ($result) {
-					// code...
-					header("Location: login.php");
+					if ($result && mysqli_num_rows($result) > 0) {
+			// code...
+						$user_data = mysqli_fetch_assoc($result);
+						
+						if($user_data['password'] === $password){
+							$_SESSION['id'] = $user_data['id'];
+							header("Location: display.php");
+							die;
+						}
+					}
 				}
-
+				echo "Wrong email or password!";		
 				
-				
-		else{
-			echo "Please enter the correct information!";
-		}
 	}
+
+
+
  ?>
 
 
@@ -37,7 +42,7 @@ session_start();
  <head>
  	<meta charset="utf-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1">
- 	<title>sign up</title>
+ 	<title>login</title>
  </head>
  <body>
  	
@@ -68,14 +73,11 @@ session_start();
  	<div id="box">
  		
  		<form method="post">
- 			<div style="font-size: 20px; margin: 10px; color: white;">Sign up</div>
- 			<input id="text" type="text" name="fname" placeholder="firstname"><br><br>
- 			<input id="text" type="text" name="lname" placeholder="lastname"><br><br>
- 			<input id="text" type="email" name="email" placeholder="email"><br><br>
+ 			<div style="font-size: 20px; margin: 10px; color: white;">Login</div>
+ 			<input id="text" type="text" name="name" placeholder="username"><br><br>
  			<input id="text" type="password" name="password" placeholder="password"><br><br>
- 			<input id="text" type="password" name="cpassword" placeholder="confirm password"><br><br>
- 			<input id="button" type="submit" name="sign up"><br><br>
- 			<a href="login.php">login</a>
+ 			<input id="button" type="submit" name="login"><br><br>
+ 			<a href="login.php">User login</a>
  		</form>
 
  	</div>

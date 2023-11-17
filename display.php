@@ -50,8 +50,8 @@ include 'connection.php';
       <td>'.$email.'</td>
       <td>'.$password.'</td>;
       <td>
-      <button><a href="">Update</a></button>
-      <button> <a href="">Delete</a> </button>
+      <button class="btn btn-primary"><a href="update.php?updateid='.$id.'" class="text-light">Update</a></button>
+      <button class="btn btn-danger"> <a href="delete.php?deleteid='.$id.'" class="text-light">Delete</a> </button>
       </td>
       </tr>';
 
@@ -63,10 +63,7 @@ include 'connection.php';
 
     ?>
 
-    <td>
-    <button> <a href="">Update</a></button>
-    <button> <a href="">Delete</a> </button>
-    </td>
+   
 
   </tbody>
 </table>
