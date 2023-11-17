@@ -1,3 +1,11 @@
+<?php
+
+include 'connection.php';
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,23 +30,44 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+ 
+
+    <?php
+
+    $sql = "SELECT * FROM users2";
+    $result= mysqli_query($conn,$sql);
+   if ($result) {
+   	// code...
+   	while ($row=mysqli_fetch_assoc($result)) {
+   		// code...
+   		$id=$row['id'];
+   		$name=$row['name'];
+   		$email=$row['email'];
+   		$password=$row['password'];
+   		echo ' <tr>
+      <th scope="row">'.$id.'</th>
+      <td>'.$name.'</td>
+      <td>'.$email.'</td>
+      <td>'.$password.'</td>';
+      <td>
+     <button><a href="">Update</a></button>
+    <button> <a href="">Delete</a> </button>
+      </td>
+      </tr>;'
+
+      
+
+   	}
+
+   }
+
+    ?>
+
+    <td>
+    <button> <a href="">Update</a></button>
+    <button> <a href="">Delete</a> </button>
+    </td>
+
   </tbody>
 </table>
  	

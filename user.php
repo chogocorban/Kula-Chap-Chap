@@ -15,7 +15,8 @@
 		$result= mysqli_query($conn,$sql);
 		if ($result) {
 			// code...
-			echo "Data inserted succesfully";
+			//echo "Data inserted succesfully";
+			header('location: display.php');
 		}else{
 			die(mysqli_error($conn));	
 		}
