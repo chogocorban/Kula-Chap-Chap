@@ -365,7 +365,8 @@ include'functions.php';
 	 					<td><?php echo $values["item_quantity"]; ?></td>
 	 					<td>$ <?php echo $values["item_price"]; ?></td>
 	 					<td><?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></td>
-	 					<td><a href="beverages.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a> </td>
+	 					<td><button><a href="snacks.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></button></td>
+
 	 				</tr>
 	 				<?php
 	 					$total = $total + ($values["item_quantity"] * $values["item_price"]);
@@ -379,6 +380,7 @@ include'functions.php';
 	 		}
 	 		?>
 	 	</table>
+	 	<button class> <a href="order.php">View Cart</a> </button> 
 </div>
 
 

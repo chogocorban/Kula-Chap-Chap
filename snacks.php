@@ -65,7 +65,7 @@ include'functions.php';
 
 	 
 	
-         <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  -->
             <link rel="stylesheet" type="text/css" href="style.css">
            <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
@@ -384,7 +384,7 @@ include'functions.php';
 	 <br>
 	 <h3>Order details</h3>
 	 <div class="table-responsive">
-	 	<table class="table-bordered">
+	 	<table class="table">
 	 		<tr>
 	 			<th width="40%">Item Name</th>
 	 			<th width="10%">Quantity</th>
@@ -405,8 +405,11 @@ include'functions.php';
 	 					<td><?php echo $values["item_quantity"]; ?></td>
 	 					<td>$ <?php echo $values["item_price"]; ?></td>
 	 					<td><?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></td>
-	 					<td><a href="snacks.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a> </td>
+	 					<td><button><a href="snacks.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></button></td>
+
+
 	 				</tr>
+
 	 				<?php
 	 					$total = $total + ($values["item_quantity"] * $values["item_price"]);
 	 			}
@@ -419,6 +422,7 @@ include'functions.php';
 	 		}
 	 		?>
 	 	</table>
+	 	<button class> <a href="order.php">View Cart</a> </button> 
 </div>
 
 

@@ -44,33 +44,12 @@ session_start();
  <head>
  	<meta charset="utf-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1">
- 	<title>login</title>
+ 	<title>User Login</title>
+ 	<link rel="stylesheet" type="text/css" href="style.css">
+ 	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
  </head>
  <body>
  	
- 	<style type="text/css">
- 		#text{
- 			height: 25px;
- 			border-radius: 5px;
- 			padding: 4px;
- 			border: solid thin #aaa;
- 		}
-
- 		#button{
- 			padding: 10px;
- 			width: 100px;
- 			color: white;
- 			background-color: lightblue;
- 			border: none;
- 		}
-
- 		#box{
- 			background-color: grey;
- 			margin: auto;
- 			width: 300px;
- 			padding: 20px;
- 		}
- 	</style>
 
  	<div id="box">
  		
