@@ -77,7 +77,7 @@ session_start();
  			<input id="text" type="text" name="name" placeholder="username"><br><br>
  			<input id="text" type="password" name="password" placeholder="password"><br><br>
  			<input id="button" type="submit" name="login"><br><br>
- 			<a href="login.php">User login</a>
+ 			<p>Are you a normal user? Log in <a href="login.php">Here</a></p>   
  		</form>
 
  	</div>

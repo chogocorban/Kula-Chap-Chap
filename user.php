@@ -1,9 +1,10 @@
 <?php 
-//session_start();
+session_start();
 
 	include 'connection.php';
+	include 'functions.php';
 	
-	//$user_data = check_login($conn);
+	$admin_data = check_admLogin($conn);
 
 	if (isset($_POST['submit'])) {
 		// code...

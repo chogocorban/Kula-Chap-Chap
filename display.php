@@ -1,7 +1,9 @@
 <?php
+session_start();
 
 include 'connection.php';
-
+include 'functions.php';
+$admin_data = check_admLogin($conn);
 
 ?>
 
@@ -19,6 +21,7 @@ include 'connection.php';
 
  <div class="container">
  	<button class="btn btn-primary"> <a href="user.php" class="text-light">Add user</a></button>
+ 	<button class="btn btn-primary"> <a href="admlogout.php" class="text-light">Log out</a></button>
 
  	<table class="table">
   <thead>

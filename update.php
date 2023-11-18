@@ -1,5 +1,7 @@
 <?php 
-//session_start();
+session_start();
+include'functions.php';
+$admin_data = check_admLogin($conn);
 
 	include 'connection.php';
 	$id=$_GET['updateid'];

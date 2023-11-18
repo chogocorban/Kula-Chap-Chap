@@ -22,21 +22,26 @@ die;
 	
 }
 
-function random_num($length){
+function check_admLogin($conn){
 
-	$text = "";
-	if($length < 5){
-
-		$length = 5;
-	}
-	$len = rand(4,$length);
-
-	for ($i=0; $i < $len; $i++) { 
+	if (isset($_SESSION['id'])) {
 		// code...
 
-		$text .= rand(0,9);
+		$id = $_SESSION['id'];
+		$query = "SELECT * FROM admin WHERE id = '$id'";
+		$result = mysqli_query($conn,$query);
+		if ($result && mysqli_num_rows($result) > 0) {
+			// code...
+			$admin_data = mysqli_fetch_assoc($result);
+			return $admin_data;
+		}
 	}
 
-	return $text;
+	//redirect to login
+header("Location: adminlogin.php");
+die;
+
+	
 }
- ?>
+
+

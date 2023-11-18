@@ -79,7 +79,7 @@ session_start();
  			<input id="text" type="email" name="email" placeholder="email"><br><br>
  			<input id="text" type="password" name="password" placeholder="password"><br><br>
  			<input id="button" type="submit" name="login"><br><br>
- 			<a href="adminlogin.php">Admin login</a>
+ 			<p>Are you an Admin? Log in <a href="adminlogin.php">Here</a></p>
  		</form>
 
  	</div>
