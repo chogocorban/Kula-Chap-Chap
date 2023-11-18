@@ -71,7 +71,7 @@ include'functions.php';
            <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
           
       </head>  
-	<title>Snacks</title>
+	<title>Food</title>
 </head>
 <body>
 <div><h1>Kula Chap Chap</h1>
@@ -81,6 +81,7 @@ include'functions.php';
 			<li><a href="snacks.php">Snacks</a></li>		
 			<li><a href="beverages.php">Beverages</a></li>
 			<li><a href="food.php">Food</a></li>
+			<li><a href="order.php">View Cart</a></li>
 			<li class="right"><a href="logout.php">Log Out</a></li>
 			
 		</ul>
@@ -88,7 +89,7 @@ include'functions.php';
 	</div>
 
 
-	<h2>Snack Menu</h2>
+	<h2>Food Menu</h2>
 
 <div class="container">
 
@@ -342,8 +343,8 @@ include'functions.php';
 	 <div style="clear: both;"></div>
 	 <br>
 	 <h3>Order details</h3>
-	 <div class="table-responsive">
-	 	<table class="table-bordered">
+	 
+	 	<table class="tableclass">
 	 		<tr>
 	 			<th width="40%">Item Name</th>
 	 			<th width="10%">Quantity</th>
@@ -378,8 +379,8 @@ include'functions.php';
 	 		}
 	 		?>
 	 	</table>
-	 		<button class> <a href="order.php">View Cartr</a> </button> 
-</div>
+	 		<button class> <a href="order.php">View Cart</a> </button> 
+
 
 
 

@@ -42,41 +42,19 @@ session_start();
  <head>
  	<meta charset="utf-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<link rel="stylesheet" type="text/css" href="style.css">
+ 	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
  	<title>login</title>
  </head>
  <body>
- 	
- 	<style type="text/css">
- 		#text{
- 			height: 25px;
- 			border-radius: 5px;
- 			padding: 4px;
- 			border: solid thin #aaa;
- 		}
-
- 		#button{
- 			padding: 10px;
- 			width: 100px;
- 			color: white;
- 			background-color: lightblue;
- 			border: none;
- 		}
-
- 		#box{
- 			background-color: grey;
- 			margin: auto;
- 			width: 300px;
- 			padding: 20px;
- 		}
- 	</style>
-
- 	<div id="box">
+<h1>Kula Chap Chap</h1> 
+ 	<div class="loginform">
  		
  		<form method="post">
  			<div style="font-size: 20px; margin: 10px; color: white;">Login</div>
- 			<input id="text" type="text" name="name" placeholder="username"><br><br>
- 			<input id="text" type="password" name="password" placeholder="password"><br><br>
- 			<input id="button" type="submit" name="login"><br><br>
+ 			<input id="text" type="text" name="name" placeholder="Username"><br><br>
+ 			<input id="text" type="password" name="password" placeholder="Password"><br><br>
+ 			<input id="button" type="submit" name="login" value="Log In"><br><br>
  			<p>Are you a normal user? Log in <a href="login.php">Here</a></p>   
  		</form>
 

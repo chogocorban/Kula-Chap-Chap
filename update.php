@@ -1,9 +1,10 @@
 <?php 
 session_start();
+include 'connection.php';
 include'functions.php';
 $admin_data = check_admLogin($conn);
 
-	include 'connection.php';
+	
 	$id=$_GET['updateid'];
 	$sql="SELECT * FROM users2 WHERE id=$id";
 	$result=mysqli_query($conn,$sql);
@@ -38,13 +39,18 @@ $admin_data = check_admLogin($conn);
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+ 	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+	<title>Update User Account</title>
 </head>
 <body>
-
-<div class="content">
+<h1>Update User Profile</h1>
+ <button > <a href="display.php">View Accounts</a></button>
+ 	<button > <a href="user.php">Add user</a></button>
+ 	<button > <a href="admlogout.php">Log out</a></button>
 	
+<div class="loginform">
+
 		<form method="post">
   <div class="form-group">
     <label>Name</label>
@@ -61,7 +67,7 @@ $admin_data = check_admLogin($conn);
     <input type="password" class="form-control" placeholder="Enter your password" name="password" autocomplete="off" value=<?php echo $password;?> >
   	</div>
 
-  <button type="submit" class="btn btn-primary" name="submit">Update</button>
+  <input type="submit" name="submit" value="Update Profile">
 </form>
 
 

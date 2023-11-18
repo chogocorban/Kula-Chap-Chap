@@ -24,6 +24,7 @@ session_start();
 			<li><a href="snacks.php">Snacks</a></li>		
 			<li><a href="beverages.php">Beverages</a></li>
 			<li><a href="food.php">Food</a></li>
+			<li><a href="order.php">View Cart</a></li>
 			<li class="right"><a href="logout.php">Log Out</a></li>
 			
 		</ul>

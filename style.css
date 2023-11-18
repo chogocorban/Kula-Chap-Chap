@@ -86,47 +86,6 @@ h2{
 	margin-top: 20px;
 	margin-left: 10px;
 }
-table{
-	border: thick;
-	border-color: white;
-	background-color: black;
-}
-
-/*.categorygallery a{
-	width: 90%;
-	align-content: center;
-	filter: drop-shadow(0px 5px 10px black);
-}
-.categorygallery{
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 20px;
-	width: 20%;
-	text-align: center;
-	margin-left: 15%;
-
-}
-.category .option{
-	background-color: #FFECB3;
-	padding: 20px;
-	border-radius: 20px;
-
-}
-.category .option h2{
-	font-weight: 500;
-	font-size: large;
-}
-.category .option .caption{
-	letter-spacing: 7px;
-	font-size: small;
-	text-align: center;		
-}
-
-tr{
-
-	color: white;
-	border-color: red;
-}*/
 
 .categorygallery{
 	width: 80%;
@@ -157,6 +116,75 @@ tr{
 	border-radius: 20px;
 	box-shadow: 0 32px 7px rgba(68, 77, 136, 0.2);
 }
-.table{
-	border-color: white;
+
+.loginform{
+
+	background-color: #FF6F00;
+	
+	border-radius: 4px;
+	padding: 20px;
+	margin: 100px 200px 10px 200px;
+	color:#FFECB3;
+	text-align: center;
+}
+.loginform [type="email"]{
+
+	width: 98%;
+	padding: 8px 12px;
+	border-radius: 4px;
+	margin: 8px 0;
+}
+.loginform [type="password"]{
+
+	width: 98%;
+	padding: 8px 12px;
+	border-radius: 4px;
+	margin: 8px 0;
+}
+.loginform [type="text"]{
+
+	width: 98%;
+	padding: 8px 12px;
+	border-radius: 4px;
+	margin: 8px 0;
+}
+ .loginform [type="submit"]{
+	width: 100%;
+	background-color: #FFAB00;
+	color:#FFECB3;
+	border: none;
+	padding: 8px 12px;
+	margin-top: 10px;
+	border-radius: 4px;
+}
+
+
+button{
+	font-size: 20px;
+	font-family: 'Indie Flower', cursive;
+	padding: 0.5em 1em;
+	margin: 0.25em 0.25em 0.25em 1em;
+	border-radius: 1em;
+	border:  none;
+	outline: none;
+	background: #FFAB00;
+	color: #FFF8E1;
+}
+.tableclass{
+	border-collapse: collapse;	
+	margin: 25px 0;
+	
+	min-width: 400px;
+}
+.tableclass th{
+	background-color: #FF8F00;
+	color: #FFF8E1;
+	text-align: left;
+	font-weight: bold;
+}
+.tableclass td{
+	padding: 12px 15px;
+}
+.tableclass tr{
+	border-bottom: 1px solid black;
 }

@@ -49,15 +49,15 @@ session_start();
  	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
  </head>
  <body>
- 	
+<h1>Kula Chap Chap</h1> 	
 
- 	<div id="box">
+ 	<div class="loginform">
  		
  		<form method="post">
  			<div style="font-size: 20px; margin: 10px; color: white;">Login</div>
- 			<input id="text" type="email" name="email" placeholder="email"><br><br>
- 			<input id="text" type="password" name="password" placeholder="password"><br><br>
- 			<input id="button" type="submit" name="login"><br><br>
+ 			<input id="text" type="email" name="email" placeholder="Email"><br><br>
+ 			<input id="text" type="password" name="password" placeholder="Password"><br><br>
+ 			<input id="button" type="submit" name="login" value="Log In"><br><br>
  			<p>Are you an Admin? Log in <a href="adminlogin.php">Here</a></p>
  		</form>
 

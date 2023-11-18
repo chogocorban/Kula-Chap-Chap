@@ -81,6 +81,7 @@ include'functions.php';
 			<li><a href="snacks.php">Snacks</a></li>		
 			<li><a href="beverages.php">Beverages</a></li>
 			<li><a href="food.php">Food</a></li>
+			<li><a href="order.php">View Cart</a></li>
 			<li class="right"><a href="logout.php">Log Out</a></li>
 			
 		</ul>
@@ -384,7 +385,7 @@ include'functions.php';
 	 <br>
 	 <h3>Order details</h3>
 	 <div class="table-responsive">
-	 	<table class="table">
+	 	<table class="tableclass">
 	 		<tr>
 	 			<th width="40%">Item Name</th>
 	 			<th width="10%">Quantity</th>

@@ -13,28 +13,29 @@ $admin_data = check_admLogin($conn);
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 	<title>View</title>
 </head>
 <body>
+<h1>Manage User Accounts</h1>
 
+  <button > <a href="display.php">View Accounts</a></button>
+ 	<button > <a href="user.php">Add user</a></button>
+ 	<button > <a href="admlogout.php">Log out</a></button>
 
- <div class="container">
- 	<button class="btn btn-primary"> <a href="user.php" class="text-light">Add user</a></button>
- 	<button class="btn btn-primary"> <a href="admlogout.php" class="text-light">Log out</a></button>
+ 	<table class="tableclass">
 
- 	<table class="table">
-  <thead>
     <tr>
-      <th scope="col">Id</th>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Password</th>
-    </tr>
-  </thead>
-  <tbody>
- 
+      <th width="10%">Id</th>
+      <th width="15%">Name</th>
+      <th width="35%">Email</th>
+      <th width="5%">Password</th>
+      <th></th>
+      <th>Action</th>
 
+    </tr>
+ 
     <?php
 
     $sql = "SELECT * FROM users2";
@@ -68,9 +69,6 @@ $admin_data = check_admLogin($conn);
 
    
 
-  </tbody>
-</table>
- 	
- </div>
+
 </body>
 </html>
