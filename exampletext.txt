@@ -1,0 +1,5 @@
+exampleeeee
+teeeeeext
+This is an example text.
+Im just learning a few git commands.
+Nothing too serious.
